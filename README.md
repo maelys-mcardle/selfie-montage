@@ -1,11 +1,14 @@
-Create Progress Video From Selfies
-==================================
+Selfie Video Montage
+====================
 
-This project is a quick script to create a montage video from a 
-series of selfies. This is broken into two steps.
+This project contains scripts to automate the process of creating 
+a video montage of selfies. For instance, as seen in some progress
+videos for trans folk.
 
-1. Identify the selfies from a collection of photographs and 
-   copy the selfies to a directory.
+This process is split into three steps:
+
+1. Identify selfies from a collection of miscellaneous 
+   photographs, then copy the selfies to a directory.
 2. Manually review the selfies in a directory.
 3. Create a montage video from the selfies.
 
@@ -22,6 +25,8 @@ for Python installed. In Fedora, this can be installed with the
 following:
 
     sudo dnf install python opencv-python
+    
+The script assumes that photos are stored in the `.jpg` format.
 
 ### Running the script
 
@@ -41,6 +46,21 @@ the false positives removed.
 Create montage video
 --------------------
 
+A script called `createvideo.sh` is available to create videos
+from the selfies.
+
 ### Requirements
 
+`ffmpeg` is required to run the script. It can be installed in
+Fedora by running the following command:
+
+    sudo dnf install ffmpeg
+
 ### Running the script
+
+To create the video, run the following:
+
+    createvideo.sh /path/to/selfies montage.mp4
+    
+The script will then create the `.mp4` video file with the 
+montage.
