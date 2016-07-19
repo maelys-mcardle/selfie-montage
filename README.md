@@ -60,7 +60,7 @@ installed in Fedora by running the following command:
 
 To create the video, run the following:
 
-    ./createvideo.sh /path/to/selfies montage.mp4
+    ./createvideo.sh /path/to/selfies soundtrack.mp3 montage.mp4
     
 The script will then create the `.mp4` video file with the 
-montage.
+montage and the specified audio file for the soundtrack.
