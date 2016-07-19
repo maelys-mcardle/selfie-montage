@@ -51,16 +51,16 @@ from the selfies.
 
 ### Requirements
 
-`ffmpeg` is required to run the script. It can be installed in
-Fedora by running the following command:
+`ffmpeg` and `exiftran` are required to run the script. They can be 
+installed in Fedora by running the following command:
 
-    sudo dnf install ffmpeg
+    sudo dnf install ffmpeg fbida
 
 ### Running the script
 
 To create the video, run the following:
 
-    createvideo.sh /path/to/selfies montage.mp4
+    ./createvideo.sh /path/to/selfies montage.mp4
     
 The script will then create the `.mp4` video file with the 
 montage.
