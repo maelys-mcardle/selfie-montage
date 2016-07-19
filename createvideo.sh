@@ -6,4 +6,9 @@
 #
 SELFIE_DIRECTORY=$1
 VIDEO_PATH=$2
-ffmpeg -r 2 -i $SELFIE_DIRECTORY/* -vf scale=-1:720 -c:v libx264 -crf 18 -preset veryslow -c:a copy $VIDEO_PATH
+ffmpeg -framerate 2 \
+       -pattern_type glob -i "$SELFIE_DIRECTORY/"'*.jpg' \
+       -c:v libx264 \
+       -r 30 \
+       -pix_fmt yuv420p \
+       $VIDEO_PATH
