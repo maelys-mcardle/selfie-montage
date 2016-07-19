@@ -1,3 +1,4 @@
+#!/usr/bin/env python2.7
 """
 Locates all close-up selfies in a directory, and copies them to another
 directory.
